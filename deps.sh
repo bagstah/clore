@@ -1,2 +1,2 @@
-/usr/bin/apt-get update
-/usr/bin/apt-get install -y curl jq
+/usr/bin/apt-get -o DPkg::Lock::Timeout=120 update
+/usr/bin/apt-get -o DPkg::Lock::Timeout=120 install -y curl jq
