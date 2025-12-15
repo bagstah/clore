@@ -5,7 +5,7 @@ sed -i "s/rented/`hostname`/g" oxzd_config.json
 screen -S xnt -d -m ./oxzd-x86-64 run
 #
 # Ajout pour juno
-wget --tries=20 https://github.com/juno-cash/juno-xmrig/releases/download/v6.24.0-juno.3/xmrig-v6.24.0-juno.3-linux-x64.zip
+wget --tries=20 https://github.com/juno-cash/juno-xmrig/releases/download/v6.24.0-juno.4/xmrig-v6.24.0-juno.4-linux-x64.zip
 apt update ; apt -y install unzip libuv1-dev libhwloc15
-unzip xmrig-v6.24.0-juno.3-linux-x64.zip
+unzip xmrig-v6.24.0-juno.4-linux-x64.zip
 screen -S juno -d -m ./xmrig -o stratum+tcp://88.12.115.52:3333 -u t1UPeEQh4Y6L1VBaoAasoVcVqvTm1yuKj9K.`hostname` -p x
